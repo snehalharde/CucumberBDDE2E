@@ -27,14 +27,14 @@ public class ChallengingDomStepDef {
 
     }
 
-    @When("^User clicks on the (.*?) button$")
-    public void user_clicks_on_the_blue_button(DataTable color) {
-        List<String> list = color.asList();
-        list.forEach(l-> clickTheColoredButton(l));
-        Pattern pattern = Pattern.compile("^Answer:\\s*(\\d+)$");
-        Matcher matcher = pattern.matcher(getAnswerValue());
-        Assert.assertTrue(matcher.matches());
-    }
+//    @When("^User clicks on the (.*?) button$")
+//    public void user_clicks_on_the_blue_button(DataTable color) {
+//        List<String> list = color.asList();
+//        list.forEach(l-> clickTheColoredButton(l));
+//        Pattern pattern = Pattern.compile("^Answer:\\s*(\\d+)$");
+//        Matcher matcher = pattern.matcher(getAnswerValue());
+//        Assert.assertTrue(matcher.matches());
+//    }
 
     @When("^User clicks on the (.*?) button$")
     public void user_clicks_on_the_blue_button(String color) {
